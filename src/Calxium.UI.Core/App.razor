@@ -1,0 +1,19 @@
+﻿@using Calxium.UI.Core.Shared
+@using Calxium.UI.SystemSettings.MyFeature.Pages
+@*@using Calxium.UI.SystemSettings.MyFeature.Pages*@
+@*@using Calxium.UI.Startup.Areas.Startup.Pages*@
+
+<Router AppAssembly="@typeof(App).Assembly" AdditionalAssemblies="new[] {typeof(Page1Model).Assembly}">
+    <Found Context="routeData">
+         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" >
+             ergdgrf
+        </RouteView>
+        <FocusOnNavigate RouteData="@routeData" Selector="h1" />
+    </Found>
+    <NotFound>
+        <PageTitle>Not found</PageTitle>
+        <LayoutView Layout="@typeof(MainLayout)">
+            <p role="alert">Sorry, there's nothing at this address.</p>
+        </LayoutView>
+    </NotFound>
+</Router>
