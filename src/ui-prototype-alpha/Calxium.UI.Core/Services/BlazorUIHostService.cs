@@ -20,7 +20,7 @@ namespace Calxium.UI.Core.Services {
 
 			var builder = WebApplication.CreateBuilder(new WebApplicationOptions {
 				Args = Environment.GetCommandLineArgs(),
-				//ApplicationName = "Calxium.UI.Core"
+				
 			});
 
 			Configure(builder.Services);
@@ -75,7 +75,7 @@ namespace Calxium.UI.Core.Services {
 			options.FileProvider ??= Environment.ContentRootFileProvider;
 
 			var basePath = "wwwroot";
-			var filesProvider = new ManifestEmbeddedFileProvider(GetType().Assembly,basePath);
+			//_ = new ManifestEmbeddedFileProvider(GetType().Assembly, basePath);
 			options.FileProvider = new CompositeFileProvider(options.FileProvider, new ManifestEmbeddedFileProvider(GetType().Assembly, basePath));
 		}
 	}
